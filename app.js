@@ -7,9 +7,15 @@ const PORT = 3000;
 
 // Cấu hình EJS
 app.set('view engine', 'ejs');
+// Thiết lập đường dẫn tuyệt đối cho thư mục 'views'
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
 
 // Cấu hình thư mục public để chứa ảnh/video
 app.use(express.static('public'));
+// Thiết lập đường dẫn tuyệt đối cho thư mục 'public'
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Đọc danh sách ảnh từ thư mục public/images
 app.get('/', (req, res) => {
