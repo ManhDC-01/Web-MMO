@@ -9,28 +9,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Cố định banner hai bên khi cuộn (chỉ cho màn hình lớn) */
-        @media (min-width: 992px) {
+        /* <!-- CSS cho banner --> */
+        @media (min-width: 1200px) {
 
             #left-banner,
             #right-banner {
                 position: fixed;
-                top: 100px;
+                top: 120px;
                 width: 160px;
                 height: 600px;
-                z-index: 1000;
+                z-index: 999;
             }
 
             #left-banner {
-                left: 0;
+                left: 10px;
             }
 
             #right-banner {
-                right: 0;
+                right: 10px;
             }
 
             .content-wrapper {
-                margin-left: 170px;
-                margin-right: 170px;
+                margin: 0 190px;
             }
         }
     </style>
@@ -38,7 +38,7 @@
 
 <body>
     <!-- Banner trái -->
-    <div id="left-banner" class="d-none d-lg-block text-center">
+    <div id="left-banner" class="d-none d-xl-block text-center">
         <script type="text/javascript">
             atOptions = {
                 'key': '9638ecf9a048551f6eaedf465148c24f',
@@ -52,7 +52,7 @@
     </div>
 
     <!-- Banner phải -->
-    <div id="right-banner" class="d-none d-lg-block text-center">
+    <div id="right-banner" class="d-none d-xl-block text-center">
         <script type="text/javascript">
             atOptions = {
                 'key': '9638ecf9a048551f6eaedf465148c24f',
