@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+.custom-thumb {
+    width: 20%;
+    padding: 10px;
+}
+
+.fixed-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+@media (max-width: 992px) {
+    .custom-thumb {
+        width: 33.33%;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-thumb {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-thumb {
+        width: 100%;
+    }
+}
