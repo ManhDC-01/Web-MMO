@@ -5,18 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Video Library</title>
-    <link rel="stylesheet" href="/css/style.css"> <!-- Thêm dòng này -->
+    <link rel="stylesheet" href="/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Cố định banner hai bên khi cuộn (chỉ cho màn hình lớn) */
+        @media (min-width: 992px) {
+
+            #left-banner,
+            #right-banner {
+                position: fixed;
+                top: 100px;
+                width: 160px;
+                height: 600px;
+                z-index: 1000;
+            }
+
+            #left-banner {
+                left: 0;
+            }
+
+            #right-banner {
+                right: 0;
+            }
+
+            .content-wrapper {
+                margin-left: 170px;
+                margin-right: 170px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
+    <!-- Banner trái -->
+    <div id="left-banner" class="d-none d-lg-block text-center">
+        <script type="text/javascript">
+            atOptions = {
+                'key': '9638ecf9a048551f6eaedf465148c24f',
+                'format': 'iframe',
+                'height': 600,
+                'width': 160,
+                'params': {}
+            };
+        </script>
+        <script type="text/javascript" src="//pawgleamed.com/9638ecf9a048551f6eaedf465148c24f/invoke.js"></script>
+    </div>
+
+    <!-- Banner phải -->
+    <div id="right-banner" class="d-none d-lg-block text-center">
+        <script type="text/javascript">
+            atOptions = {
+                'key': '9638ecf9a048551f6eaedf465148c24f',
+                'format': 'iframe',
+                'height': 600,
+                'width': 160,
+                'params': {}
+            };
+        </script>
+        <script type="text/javascript" src="//pawgleamed.com/9638ecf9a048551f6eaedf465148c24f/invoke.js"></script>
+    </div>
+
+    <!-- Nội dung chính -->
+    <div class="container content-wrapper">
         <%- body %>
     </div>
 
-    <!-- popup -->
-    <script type='text/javascript'
-        src='//pl26299660.effectiveratecpm.com/9d/5f/01/9d5f0133cf8f824544c14748fda19888.js'></script>
+    <!-- Popup quảng cáo -->
+    <script type="text/javascript"
+        src="//pl26299660.effectiveratecpm.com/9d/5f/01/9d5f0133cf8f824544c14748fda19888.js"></script>
 </body>
 
 </html>

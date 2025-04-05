@@ -17,42 +17,29 @@
         </div>
     </div>
 
-    <!-- Danh sách ảnh chia nhóm 8 -->
+    <!-- Danh sách ảnh -->
     <div class="container text-center">
-        <% for (let i=0; i < videos.length; i +=8) { %>
-            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 g-3 mb-3">
-                <% videos.slice(i, i + 8).forEach(function(video) { %>
-                    <% if (video.thumbnail && !video.thumbnail.includes('logo')) { %>
-                        <div class="col">
-                            <div class="card h-100">
-                                <a href="https://www.effectiveratecpm.com/hsc2y9xkpg?key=74cd8a13365ef6197198e20829aff5de"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <img src="<%= video.thumbnail %>" class="card-img-top" alt="Thumbnail"
-                                        style="height: 200px; object-fit: cover;">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title text-center">
-                                        <%= video.title %>
-                                    </h5>
-                                </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-3">
+            <% videos.forEach(function(video) { %>
+                <% if (video.thumbnail && !video.thumbnail.includes('logo')) { %>
+                    <div class="col-md-2 col-sm-4 col-6">
+                        <div class="card mb-4">
+                            <!-- Link direct quảng cáo -->
+                            <a href="https://www.effectiveratecpm.com/hsc2y9xkpg?key=74cd8a13365ef6197198e20829aff5de"
+                                target="_blank" rel="noopener noreferrer">
+                                <img src="<%= video.thumbnail %>" class="card-img-top" alt="Thumbnail" width="200"
+                                    height="200" style="object-fit: cover;">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center">
+                                    <%= video.title %>
+                                </h5>
                             </div>
                         </div>
-                        <% } %>
-                            <% }); %>
-            </div>
-
-            <!-- Banner sau mỗi nhóm 8 ảnh, trừ cuối -->
-            <% if (i + 8 < videos.length) { %>
-                <div class="my-3 d-flex justify-content-center">
-                    <div class="bg-light p-3 rounded shadow-sm"
-                        style="min-width: 320px; max-width: 728px; width: 100%;">
-                        <script async="async" data-cfasync="false"
-                            src="//pl26299766.effectiveratecpm.com/d944cbb92e0d78aaab9c8318257f32af/invoke.js"></script>
-                        <div id="container-d944cbb92e0d78aaab9c8318257f32af"></div>
                     </div>
-                </div>
-                <% } %>
                     <% } %>
+                        <% }); %>
+        </div>
     </div>
 
 </main>
