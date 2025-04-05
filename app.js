@@ -39,8 +39,8 @@ app.get('/', (req, res) => {
 });
 
 // Chạy server
-// app.listen(PORT, () => {
-//     console.log(`Server chạy tại: http://localhost:${PORT}`);
-// });
+app.listen(PORT, () => {
+    console.log(`Server chạy tại: http://localhost:${PORT}`);
+});
 // ✅ Export app
-module.exports = app;
+// module.exports = app;
